@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
   color: initial;
@@ -70,6 +74,11 @@ a:hover {
 @media screen and (max-width: 1010px) {
   .top-bar .menuRow .logoLeft {
     width: calc(100% - 775px);
+  }
+}
+@media screen and (max-width: 930px) {
+  .top-bar .menuRow .logoLeft {
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 810px) {
@@ -158,9 +167,10 @@ a:hover {
   background: #f8f8f8;
 }
 .aboutBottom .payment {
-  width: 100%;
+  width: 90%;
   object-fit: cover;
-  margin-bottom: 30px;
+  margin: 10px auto;
+  display: block;
   overflow: hidden;
 }
 .aboutBottom .logo {
@@ -185,12 +195,12 @@ a:hover {
 .achievementText {
   padding: 40px 0px;
   text-align: center;
-  background: rgba(216, 88, 53, 0.4392156863);
+  background-image: url("./assets/textures/titleBg.jpg");
   margin: 10px 0px;
 }
 .achievementText h4 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .itemsRow h2 {
@@ -313,7 +323,7 @@ a:hover {
   background: transparent;
   right: -60px;
 }
-.itemsRow .itemsList img {
+.itemsRow .itemsList .galleryImg {
   min-width: 300px;
   padding: 10px;
 }
@@ -323,7 +333,7 @@ a:hover {
 .itemsRow .itemsList .med {
   width: 50%;
 }
-.itemsRow .itemsList .large {
+.itemsRow .itemsList .big {
   width: 100%;
 }
 
@@ -332,7 +342,7 @@ a:hover {
 }
 .imagesRow img {
   width: 100%;
-  padding: 10px;
+  margin: 10px;
   max-width: 700px;
   margin: 0px auto;
   display: block;
@@ -430,8 +440,9 @@ a:hover {
   overflow-y: auto;
 }
 .navBarRight .cart {
-  margin: 20px calc(50% - 40px);
+  margin: 20px 25%;
   fill: lightgrey;
+  width: 50%;
 }
 .navBarRight h5,
 .navBarRight h2 {
@@ -443,6 +454,7 @@ a:hover {
 .navBarRight h2 {
   font-weight: bold;
   margin-bottom: 20px;
+  margin-top: 50px;
 }
 .navBarRight .backLogo {
   position: absolute;
@@ -470,18 +482,19 @@ a:hover {
 .bottomNavBar {
   position: fixed;
   bottom: 0;
+  left: 0;
+  right: 0;
   padding: 20px 10px 10px 10px;
   background: #fff;
-  display: flex;
+  display: none;
   align-items: center;
-  justify-content: space-around;
-  width: 100%;
+  justify-content: space-between;
   display: none;
   z-index: 998;
 }
 @media screen and (max-width: 810px) {
   .bottomNavBar {
-    display: flex;
+    display: none;
   }
 }
 .bottomNavBar .item {
@@ -557,67 +570,67 @@ a:hover {
   text-align: justify;
 }
 
-.latestProducts h3 {
+.animatedProducts h3 {
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 0.1em;
 }
-.latestProducts .productsList {
+.animatedProducts .productsList {
   display: flex;
   justify-content: start;
   width: 100%;
   overflow-x: auto;
 }
-.latestProducts .productsList .product {
+.animatedProducts .productsList .product {
   margin: 10px;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
 }
-.latestProducts .productsList .product:hover .heartLogo {
+.animatedProducts .productsList .product:hover .heartLogo {
   background: #fff;
   transition: 0s ease;
 }
-.latestProducts .productsList .product:hover .eyeLogo,
-.latestProducts .productsList .product:hover .refreshLogo {
+.animatedProducts .productsList .product:hover .eyeLogo,
+.animatedProducts .productsList .product:hover .refreshLogo {
   background: #fff;
   right: 10px;
   transition: 0.8s ease;
 }
-.latestProducts .productsList .product:hover .heartLogo,
-.latestProducts .productsList .product:hover .eyeLogo,
-.latestProducts .productsList .product:hover .refreshLogo {
+.animatedProducts .productsList .product:hover .heartLogo,
+.animatedProducts .productsList .product:hover .eyeLogo,
+.animatedProducts .productsList .product:hover .refreshLogo {
   box-shadow: 0px 0px 5px 1px rgba(78, 78, 78, 0.431372549);
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product:hover .info {
+.animatedProducts .productsList .product:hover .info {
   bottom: 0px;
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product:not(:hover) .heartLogo {
+.animatedProducts .productsList .product:not(:hover) .heartLogo {
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product:not(:hover) .eyeLogo,
-.latestProducts .productsList .product:not(:hover) .refreshLogo {
+.animatedProducts .productsList .product:not(:hover) .eyeLogo,
+.animatedProducts .productsList .product:not(:hover) .refreshLogo {
   right: -60px;
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product:not(:hover) .heartLogo,
-.latestProducts .productsList .product:not(:hover) .eyeLogo,
-.latestProducts .productsList .product:not(:hover) .refreshLogo {
+.animatedProducts .productsList .product:not(:hover) .heartLogo,
+.animatedProducts .productsList .product:not(:hover) .eyeLogo,
+.animatedProducts .productsList .product:not(:hover) .refreshLogo {
   box-shadow: none;
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product:not(:hover) .info {
+.animatedProducts .productsList .product:not(:hover) .info {
   bottom: -45px;
   transition: 0.5s ease;
 }
-.latestProducts .productsList .product img {
+.animatedProducts .productsList .product img {
   object-fit: cover;
   width: 230px;
   height: 320px;
 }
-.latestProducts .productsList .product .info {
+.animatedProducts .productsList .product .info {
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -627,15 +640,15 @@ a:hover {
   bottom: 0px;
   width: 100%;
 }
-.latestProducts .productsList .product .info .name,
-.latestProducts .productsList .product .info .price {
+.animatedProducts .productsList .product .info .name,
+.animatedProducts .productsList .product .info .price {
   padding: 8px 0;
   font-size: 115%;
   line-height: 130%;
   font-weight: normal;
   display: block;
 }
-.latestProducts .productsList .product .info button {
+.animatedProducts .productsList .product .info button {
   background: #d85935;
   border: none;
   font-weight: 700;
@@ -644,13 +657,13 @@ a:hover {
   white-space: nowrap;
   border-radius: 6px;
 }
-.latestProducts .productsList .product .info button:hover {
+.animatedProducts .productsList .product .info button:hover {
   background: #de1741;
   transition: 0.4s ease;
 }
-.latestProducts .productsList .product .heartLogo,
-.latestProducts .productsList .product .refreshLogo,
-.latestProducts .productsList .product .eyeLogo {
+.animatedProducts .productsList .product .heartLogo,
+.animatedProducts .productsList .product .refreshLogo,
+.animatedProducts .productsList .product .eyeLogo {
   position: absolute;
   cursor: pointer;
   right: 10px;
@@ -659,21 +672,21 @@ a:hover {
   width: 40px;
   height: 40px;
 }
-.latestProducts .productsList .product .heartLogo svg,
-.latestProducts .productsList .product .refreshLogo svg,
-.latestProducts .productsList .product .eyeLogo svg {
+.animatedProducts .productsList .product .heartLogo svg,
+.animatedProducts .productsList .product .refreshLogo svg,
+.animatedProducts .productsList .product .eyeLogo svg {
   vertical-align: top;
 }
-.latestProducts .productsList .product .heartLogo {
+.animatedProducts .productsList .product .heartLogo {
   top: 10px;
   background: transparent;
 }
-.latestProducts .productsList .product .eyeLogo {
+.animatedProducts .productsList .product .eyeLogo {
   top: 70px;
   background: transparent;
   right: -60px;
 }
-.latestProducts .productsList .product .refreshLogo {
+.animatedProducts .productsList .product .refreshLogo {
   top: 130px;
   background: transparent;
   right: -60px;

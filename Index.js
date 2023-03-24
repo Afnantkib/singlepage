@@ -1,6 +1,4 @@
 const horScroll = (isLeft) => {
-	console.log('hajskhg')
-	console.log(document.getElementById('carouselId'));
 	document.getElementById('carouselId').scrollLeft += (isLeft * document.getElementById('carouselId').offsetWidth)
 }
 
@@ -10,7 +8,7 @@ const navBarLeftOpen = () => {
 }
 
 const navBarLeftClose = () => {
-	document.getElementById('navBarLeftId').style.left = '-60%';
+	document.getElementById('navBarLeftId').style.left = window.innerWidth <= 600 ? '-80%' : '-60%';
 	document.getElementById('overlay').style.display = 'none';
 }
 
@@ -32,5 +30,5 @@ const aboutClick = () => {
 }
 
 const reloadFunc = () => {
-	
+
 }
