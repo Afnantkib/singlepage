@@ -1,0 +1,433 @@
+* {
+	// outline: 1px solid lightgrey;
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 10px;
+	font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+	position: relative;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: initial;
+
+	&:hover {
+		text-decoration: none;
+		color: initial;
+	}
+}
+
+::-webkit-scrollbar {
+	height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #565656;
+}
+
+
+.top-bar {
+	.headerRow {
+		width: 100%;
+		clear: both;
+		border-bottom: 1px solid #00000020;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.left-text {
+			font: 14.5px "Nunito Sans", Arial, Helvetica, sans-serif;
+			line-height: 36px;
+		}
+
+		.right-buttons {
+			line-height: 36px;
+
+			button {
+				margin-left: 30px;
+				background: none;
+				border: none;
+				color: black;
+				white-space: nowrap;
+				font: 14.5px "Nunito Sans", Arial, Helvetica, sans-serif;
+				transition: color .5s ease;
+
+				&:hover {
+					color: #d85935;
+				}
+			}
+		}
+
+	}
+
+	.menuRow {
+		padding: 10px 0px;
+		clear: both;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.logoLeft {
+			width: 200px;
+
+			@media screen and (max-width: 1010px) {
+				width: calc(100% - 775px);
+			}
+
+			@media screen and (max-width: 810px) {
+				display: none;
+			}
+		}
+
+		.logoMid {
+			display: none;
+			width: 200px;
+			padding: 0px 10px;
+
+			@media screen and (max-width: 810px) {
+				display: block;
+			}
+
+			@media screen and (max-width: 510px) {
+				width: calc(100% - 200px);
+			}
+		}
+
+		.navButtons {
+			margin-left: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@media screen and (max-width: 810px) {
+				display: none;
+			}
+
+			button {
+				display: inline-block;
+				position: relative;
+				white-space: nowrap;
+				padding: 5px 0px 2px 0px;
+				background: none;
+				font-size: 80%;
+				margin-right: 30px;
+				margin-left: 0px;
+				font-size: 16px;
+				border: none;
+				font-weight: 700;
+				letter-spacing: 0.1em;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 100%;
+					transform: scaleX(0);
+					height: 2px;
+					bottom: 0;
+					left: 0;
+					background-color: #000000;
+					transform-origin: bottom right;
+					transition: transform 0.25s ease-out;
+				}
+
+				&:hover::after {
+					transform: scaleX(1);
+					transform-origin: bottom left;
+				}
+			}
+		}
+
+		.menuIcon {
+			// fill: black;
+			margin-left: 10px;
+			cursor: pointer;
+
+		}
+
+		.heart,
+		.refresh {
+			@media screen and (max-width: 810px) {
+				display: none;
+			}
+		}
+
+		.navBtn {
+			display: none;
+
+			@media screen and (max-width: 810px) {
+				display: block;
+			}
+		}
+	}
+}
+
+.achievementText {
+	padding: 40px 0px;
+	text-align: center;
+	background: #d8583570;
+	margin: 10px 0px;
+
+	h4 {
+		font-weight: bold;
+		font-size: 30px;
+	}
+
+}
+
+.imagesRow {
+	margin-bottom: 20px;
+
+	img {
+		width: 100%;
+		padding: 10px;
+		max-width: 700px;
+		margin: 0px auto;
+		display: block;
+	}
+
+	.info {
+		font-size: 18px;
+		text-align: center;
+	}
+}
+
+.otherAchievementsRow {
+	h2 {
+		font-weight: 800;
+		font-size: 26px;
+	}
+
+	.achievementsList {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		img {
+			padding: 10px;
+			width: 300px;
+			object-fit: cover;
+		}
+	}
+}
+
+.aboutBottom {
+	padding: 100px 0px;
+	margin: 0px 10px;
+	background: #f8f8f8;
+
+	.payment {
+		width: 100%;
+		object-fit: cover;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+
+	.logo {
+		width: 200px;
+		object-fit: cover;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+
+	p {
+		strong {
+			display: block;
+		}
+
+		font-size: 15px;
+	}
+
+	h4 {
+		font-weight: 800;
+	}
+
+	li {
+		cursor: pointer;
+
+	}
+
+}
+
+.navBarLeft {
+	position: fixed;
+	top: 0;
+	width: 60%;
+	left: -60%;
+	bottom: 0;
+	padding: 10px;
+	z-index: 9999;
+	background: #ffffff;
+	transition: .5s ease;
+	overflow-y: auto;
+
+	.backLogo {
+		position: absolute;
+		cursor: pointer;
+		right: 10px;
+		padding: 7px 0px 0px 7px;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		background: #fff;
+		box-shadow: 0px 0px 3px 1px lightgrey;
+
+		&:hover {
+			background: #d85935;
+			transition: .3s ease;
+
+			svg {
+				fill: white;
+				transition: .3s ease;
+			}
+		}
+
+		&:not( :hover) {
+			transition: .5s ease;
+		}
+
+	}
+
+	.logoLeft {
+		width: 40%;
+		padding-bottom: 30px;
+	}
+
+	.menuItems {
+		cursor: pointer;
+		padding: 10px;
+		font-weight: 800;
+		font-size: 30px;
+		border-top: 1px solid lightgrey;
+
+		@media screen and (max-width: 400px) {
+			font-size: 20px;
+		}
+
+		@media screen and (max-width: 320px) {
+			font-size: 15px;
+		}
+
+	}
+}
+
+.navBarRight {
+	position: fixed;
+	top: 0;
+	width: 40%;
+	right: -40%;
+	bottom: 0;
+	padding: 10px;
+	z-index: 9999;
+	background: #ffffff;
+	transition: .5s ease;
+	overflow-y: auto;
+
+	// display: flex;
+	.cart {
+		margin: 20px calc(50% - 40px);
+		fill: lightgrey;
+	}
+
+	h5,
+	h2 {
+		text-align: center;
+	}
+
+	h5 {
+		margin-bottom: 50px;
+	}
+
+	h2 {
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	.backLogo {
+		position: absolute;
+		cursor: pointer;
+		left: 10px;
+		padding: 7px 0px 0px 7px;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		background: #fff;
+		box-shadow: 0px 0px 3px 1px lightgrey;
+
+		&:hover {
+			background: #d85935;
+			transition: .3s ease;
+
+			svg {
+				fill: white;
+				transition: .3s ease;
+			}
+		}
+
+		&:not( :hover) {
+			transition: .5s ease;
+		}
+
+	}
+
+}
+
+.bottomNavBar {
+	position: fixed;
+	bottom: 0;
+	padding: 20px 10px 10px 10px;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	display: none;
+	z-index: 998;
+
+	@media screen and (max-width: 810px) {
+		display: flex;
+	}
+
+	.item {
+		width: 15%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+#overlay {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background: rgba(0, 0, 0, 0.5);
+	pointer-events: none;
+}
+
+
+
+/////////////////////////////////////////////////////
+.hoverOrange {
+	&:hover {
+		color: #de1741;
+		transition: .5s ease;
+	}
+
+	&:not( :hover) {
+		transition: .5s ease;
+	}
+}

@@ -1,0 +1,377 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+a:hover {
+  text-decoration: none;
+  color: initial;
+}
+
+::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #565656;
+}
+
+.top-bar .headerRow {
+  width: 100%;
+  clear: both;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1254901961);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .headerRow .left-text {
+  font: 14.5px "Nunito Sans", Arial, Helvetica, sans-serif;
+  line-height: 36px;
+}
+.top-bar .headerRow .right-buttons {
+  line-height: 36px;
+}
+.top-bar .headerRow .right-buttons button {
+  margin-left: 30px;
+  background: none;
+  border: none;
+  color: black;
+  white-space: nowrap;
+  font: 14.5px "Nunito Sans", Arial, Helvetica, sans-serif;
+  transition: color 0.5s ease;
+}
+.top-bar .headerRow .right-buttons button:hover {
+  color: #d85935;
+}
+.top-bar .menuRow {
+  padding: 10px 0px;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar .menuRow .logoLeft {
+  width: 200px;
+}
+@media screen and (max-width: 1010px) {
+  .top-bar .menuRow .logoLeft {
+    width: calc(100% - 775px);
+  }
+}
+@media screen and (max-width: 810px) {
+  .top-bar .menuRow .logoLeft {
+    display: none;
+  }
+}
+.top-bar .menuRow .logoMid {
+  display: none;
+  width: 200px;
+  padding: 0px 10px;
+}
+@media screen and (max-width: 810px) {
+  .top-bar .menuRow .logoMid {
+    display: block;
+  }
+}
+@media screen and (max-width: 510px) {
+  .top-bar .menuRow .logoMid {
+    width: calc(100% - 200px);
+  }
+}
+.top-bar .menuRow .navButtons {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 810px) {
+  .top-bar .menuRow .navButtons {
+    display: none;
+  }
+}
+.top-bar .menuRow .navButtons button {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  padding: 5px 0px 2px 0px;
+  background: none;
+  font-size: 80%;
+  margin-right: 30px;
+  margin-left: 0px;
+  font-size: 16px;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+.top-bar .menuRow .navButtons button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.top-bar .menuRow .navButtons button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.top-bar .menuRow .menuIcon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+@media screen and (max-width: 810px) {
+  .top-bar .menuRow .heart,
+  .top-bar .menuRow .refresh {
+    display: none;
+  }
+}
+.top-bar .menuRow .navBtn {
+  display: none;
+}
+@media screen and (max-width: 810px) {
+  .top-bar .menuRow .navBtn {
+    display: block;
+  }
+}
+
+.achievementText {
+  padding: 40px 0px;
+  text-align: center;
+  background: rgba(216, 88, 53, 0.4392156863);
+  margin: 10px 0px;
+}
+.achievementText h4 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.imagesRow {
+  margin-bottom: 20px;
+}
+.imagesRow img {
+  width: 100%;
+  padding: 10px;
+  max-width: 700px;
+  margin: 0px auto;
+  display: block;
+}
+.imagesRow .info {
+  font-size: 18px;
+  text-align: center;
+}
+
+.otherAchievementsRow h2 {
+  font-weight: 800;
+  font-size: 26px;
+}
+.otherAchievementsRow .achievementsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.otherAchievementsRow .achievementsList img {
+  padding: 10px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.aboutBottom {
+  padding: 100px 0px;
+  margin: 0px 10px;
+  background: #f8f8f8;
+}
+.aboutBottom .payment {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.aboutBottom .logo {
+  width: 200px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.aboutBottom p {
+  font-size: 15px;
+}
+.aboutBottom p strong {
+  display: block;
+}
+.aboutBottom h4 {
+  font-weight: 800;
+}
+.aboutBottom li {
+  cursor: pointer;
+}
+
+.navBarLeft {
+  position: fixed;
+  top: 0;
+  width: 60%;
+  left: -60%;
+  bottom: 0;
+  padding: 10px;
+  z-index: 9999;
+  background: #ffffff;
+  transition: 0.5s ease;
+  overflow-y: auto;
+}
+.navBarLeft .backLogo {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  padding: 7px 0px 0px 7px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0px 0px 3px 1px lightgrey;
+}
+.navBarLeft .backLogo:hover {
+  background: #d85935;
+  transition: 0.3s ease;
+}
+.navBarLeft .backLogo:hover svg {
+  fill: white;
+  transition: 0.3s ease;
+}
+.navBarLeft .backLogo:not(:hover) {
+  transition: 0.5s ease;
+}
+.navBarLeft .logoLeft {
+  width: 40%;
+  padding-bottom: 30px;
+}
+.navBarLeft .menuItems {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 800;
+  font-size: 30px;
+  border-top: 1px solid lightgrey;
+}
+@media screen and (max-width: 400px) {
+  .navBarLeft .menuItems {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navBarLeft .menuItems {
+    font-size: 15px;
+  }
+}
+
+.navBarRight {
+  position: fixed;
+  top: 0;
+  width: 40%;
+  right: -40%;
+  bottom: 0;
+  padding: 10px;
+  z-index: 9999;
+  background: #ffffff;
+  transition: 0.5s ease;
+  overflow-y: auto;
+}
+.navBarRight .cart {
+  margin: 20px calc(50% - 40px);
+  fill: lightgrey;
+}
+.navBarRight h5,
+.navBarRight h2 {
+  text-align: center;
+}
+.navBarRight h5 {
+  margin-bottom: 50px;
+}
+.navBarRight h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.navBarRight .backLogo {
+  position: absolute;
+  cursor: pointer;
+  left: 10px;
+  padding: 7px 0px 0px 7px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0px 0px 3px 1px lightgrey;
+}
+.navBarRight .backLogo:hover {
+  background: #d85935;
+  transition: 0.3s ease;
+}
+.navBarRight .backLogo:hover svg {
+  fill: white;
+  transition: 0.3s ease;
+}
+.navBarRight .backLogo:not(:hover) {
+  transition: 0.5s ease;
+}
+
+.bottomNavBar {
+  position: fixed;
+  bottom: 0;
+  padding: 20px 10px 10px 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  display: none;
+  z-index: 998;
+}
+@media screen and (max-width: 810px) {
+  .bottomNavBar {
+    display: flex;
+  }
+}
+.bottomNavBar .item {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.hoverOrange:hover {
+  color: #de1741;
+  transition: 0.5s ease;
+}
+.hoverOrange:not(:hover) {
+  transition: 0.5s ease;
+}
+
+/*# sourceMappingURL=finalStyle.css.map */
