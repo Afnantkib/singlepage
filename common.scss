@@ -19,9 +19,6 @@ a {
 	}
 }
 
-* {
-	// outline: 1px solid lightgrey;
-}
 
 ::-webkit-scrollbar {
 	height: 6px;
@@ -881,7 +878,7 @@ a {
 	pointer-events: none;
 }
 
-/////////////////////////////////////////////////////
+
 .hoverOrange {
 	&:hover {
 		color: #de1741;
