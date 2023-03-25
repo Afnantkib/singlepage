@@ -494,7 +494,7 @@ a:hover {
 }
 @media screen and (max-width: 810px) {
   .bottomNavBar {
-    display: none;
+    display: flex;
   }
 }
 .bottomNavBar .item {
